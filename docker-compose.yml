@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  node:
+    image: node:19
+    tty: true
+    user: node
+    volumes:
+      - ./:/home/node/workspace
+      - node_modules:/home/node/workspace/node_modules
+    working_dir: /home/node/workspace
+
+volumes:
+  node_modules:
